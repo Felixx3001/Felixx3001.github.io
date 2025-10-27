@@ -1,54 +1,82 @@
-<header>
+# Felixx3001的个人博客
 
-<!--
-  <<< Author notes: Course header >>>
-  Include a 1280×640 image, course title in sentence case, and a concise description in emphasis.
-  In your repository settings: enable template repository, add your 1280×640 social image, auto delete head branches.
-  Add your open source license, GitHub uses MIT license.
--->
+欢迎来到我的个人博客！这是一个使用纯HTML、CSS和JavaScript构建的静态网站，托管在GitHub Pages上。
 
-# GitHub Pages
+## 🌟 特性
 
-_Create a site or blog from your GitHub repositories with GitHub Pages._
+- ✨ 纯手写代码，不使用Jekyll或其他静态网站生成器
+- 📱 响应式设计，支持移动设备
+- 🎨 现代化的UI设计
+- 🚀 轻量快速，无需构建过程
+- 📝 包含博客文章系统
 
-</header>
+## 📂 项目结构
 
-<!--
-  <<< Author notes: Step 2 >>>
-  Start this step by acknowledging the previous step.
-  Define terms and link to docs.github.com.
-  Historic note: previous version checked for empty pull request, changed to the correct theme `minima`.
--->
+```
+Felixx3001.github.io/
+├── index.html              # 首页
+├── about.html              # 关于页面
+├── styles.css              # 样式文件
+├── script.js               # JavaScript文件
+├── posts/                  # 博客文章目录
+│   ├── welcome.html
+│   ├── github-pages-tutorial.html
+│   └── frontend-learning-path.html
+└── README.md               # 项目说明
+```
 
-## Step 2: Configure your site
+## 🚀 快速开始
 
-_You turned on GitHub Pages! :tada:_
+### 本地预览
 
-We'll work in a branch, `my-pages`, that I created for you to get this site looking great. :sparkle:
+1. 克隆仓库：
+```bash
+git clone https://github.com/Felixx3001/Felixx3001.github.io.git
+cd Felixx3001.github.io
+```
 
-Jekyll uses a file titled `_config.yml` to store settings for your site, your theme, and reusable content like your site title and GitHub handle. You can check out the `_config.yml` file on the **Code** tab of your repository.
+2. 在浏览器中打开 `index.html` 文件即可预览
 
-We need to use a blog-ready theme. For this activity, we will use a theme named "minima".
+### 在线访问
 
-### :keyboard: Activity: Configure your site
+访问 [https://felixx3001.github.io](https://felixx3001.github.io) 查看在线版本
 
-1. Browse to the `_config.yml` file in the `my-pages` branch.
-1. In the upper right corner, open the file editor.
-1. Add a `theme:` set to **minima** so it shows in the `_config.yml` file as below:
-   ```yml
-   theme: minima
-   ```
-1. (optional) You can modify the other configuration variables such as `title:`, `author:`, and `description:` to further customize your site.
-1. Commit your changes.
-1. (optional) Create a pull request to view all the changes you'll make throughout this course. Click the **Pull Requests** tab, click **New pull request**, set `base: main` and `compare:my-pages`.
-1. Wait about 20 seconds then refresh this page (the one you're following instructions from). [GitHub Actions](https://docs.github.com/en/actions) will automatically update to the next step.
+## 📝 添加新文章
 
-<footer>
+1. 在 `posts/` 目录下创建新的HTML文件
+2. 使用现有文章作为模板
+3. 在 `script.js` 的 `posts` 数组中添加文章信息：
 
-<!--
-  <<< Author notes: Footer >>>
-  Add a link to get support, GitHub status page, code of conduct, license link.
--->
+```javascript
+{
+    id: 4,
+    title: "你的文章标题",
+    date: "2025-10-27",
+    excerpt: "文章摘要",
+    tags: ["标签1", "标签2"],
+    filename: "your-post.html"
+}
+```
+
+## 🛠️ 技术栈
+
+- **HTML5** - 页面结构
+- **CSS3** - 样式设计（Flexbox、Grid布局）
+- **JavaScript (ES6+)** - 动态交互
+- **GitHub Pages** - 免费托管
+
+## 📄 License
+
+本项目采用 MIT 许可证 - 查看 [LICENSE](LICENSE) 文件了解详情
+
+## 📧 联系方式
+
+- GitHub: [@Felixx3001](https://github.com/Felixx3001)
+- 网站: [felixx3001.github.io](https://felixx3001.github.io)
+
+---
+
+⭐ 如果你喜欢这个项目，欢迎给个Star！
 
 ---
 

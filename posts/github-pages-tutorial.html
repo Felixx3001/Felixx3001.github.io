@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="如何使用GitHub Pages搭建个人网站">
+    <title>如何使用GitHub Pages搭建个人网站 - Felixx3001</title>
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+    <!-- 导航栏 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-brand">
+                <h1>Felixx3001</h1>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="../index.html">首页</a></li>
+                <li><a href="../about.html">关于</a></li>
+                <li><a href="https://github.com/Felixx3001" target="_blank">GitHub</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 文章内容 -->
+    <main class="container">
+        <article class="article">
+            <header class="article-header">
+                <h1 class="article-title">如何使用GitHub Pages搭建个人网站</h1>
+                <div class="post-meta">
+                    <time datetime="2025-10-27">2025年10月27日</time>
+                    <span> · </span>
+                    <span class="tag">GitHub</span>
+                    <span class="tag">教程</span>
+                    <span class="tag">Web开发</span>
+                </div>
+            </header>
+
+            <div class="article-content">
+                <p>GitHub Pages 是一个免费的静态网站托管服务，让你可以直接从GitHub仓库发布网站。本教程将带你从零开始搭建一个个人网站。</p>
+
+                <h2>什么是GitHub Pages？</h2>
+                <p>GitHub Pages是GitHub提供的一项服务，可以将你的GitHub仓库转换成一个可访问的网站。它支持：</p>
+                <ul>
+                    <li>静态HTML、CSS、JavaScript文件</li>
+                    <li>Jekyll静态网站生成器</li>
+                    <li>自定义域名</li>
+                    <li>HTTPS支持</li>
+                    <li>完全免费</li>
+                </ul>
+
+                <h2>创建GitHub Pages仓库</h2>
+                <p>要创建一个GitHub Pages网站，需要遵循以下步骤：</p>
+
+                <h3>1. 创建仓库</h3>
+                <p>在GitHub上创建一个新仓库，仓库名必须是：<code>username.github.io</code>，其中<code>username</code>是你的GitHub用户名。</p>
+
+                <h3>2. 克隆仓库到本地</h3>
+                <pre><code>git clone https://github.com/username/username.github.io
+cd username.github.io</code></pre>
+
+                <h3>3. 创建网站文件</h3>
+                <p>创建一个<code>index.html</code>文件作为网站首页：</p>
+                <pre><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="zh-CN"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;我的网站&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;h1&gt;Hello, World!&lt;/h1&gt;
+    &lt;p&gt;欢迎来到我的个人网站&lt;/p&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+
+                <h3>4. 推送到GitHub</h3>
+                <pre><code>git add .
+git commit -m "Initial commit"
+git push origin main</code></pre>
+
+                <h3>5. 访问你的网站</h3>
+                <p>等待几分钟后，访问 <code>https://username.github.io</code> 就可以看到你的网站了！</p>
+
+                <h2>使用纯HTML/CSS/JS构建</h2>
+                <p>不使用Jekyll，而是使用原生技术的好处：</p>
+                <ul>
+                    <li><strong>简单直接</strong>：不需要学习Ruby或Jekyll</li>
+                    <li><strong>完全控制</strong>：可以精确控制每一个细节</li>
+                    <li><strong>快速加载</strong>：没有额外的构建过程</li>
+                    <li><strong>易于调试</strong>：直接在浏览器中查看源码</li>
+                </ul>
+
+                <h2>项目结构建议</h2>
+                <p>一个典型的GitHub Pages项目结构：</p>
+                <pre><code>username.github.io/
+├── index.html          # 首页
+├── about.html          # 关于页面
+├── styles.css          # 样式文件
+├── script.js           # JavaScript文件
+├── posts/              # 博客文章目录
+│   ├── post1.html
+│   └── post2.html
+└── images/             # 图片资源
+    └── logo.png</code></pre>
+
+                <h2>添加样式和交互</h2>
+                <p>使用CSS美化你的网站：</p>
+                <pre><code>/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    color: #2563eb;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+}</code></pre>
+
+                <p>使用JavaScript添加交互功能：</p>
+                <pre><code>// script.js
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('网站已加载！');
+    // 在这里添加你的交互逻辑
+});</code></pre>
+
+                <h2>进阶技巧</h2>
+                <h3>使用自定义域名</h3>
+                <p>在仓库设置中可以配置自定义域名，让你的网站使用自己的域名访问。</p>
+
+                <h3>响应式设计</h3>
+                <p>确保你的网站在移动设备上也能良好显示：</p>
+                <pre><code>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</code></pre>
+
+                <h3>SEO优化</h3>
+                <p>添加适当的meta标签来提升搜索引擎优化：</p>
+                <pre><code>&lt;meta name="description" content="网站描述"&gt;
+&lt;meta name="keywords" content="关键词1, 关键词2"&gt;</code></pre>
+
+                <h2>总结</h2>
+                <p>GitHub Pages提供了一个简单、免费且强大的方式来托管你的个人网站。通过使用纯HTML、CSS和JavaScript，你可以创建一个完全自定义的网站，同时保持代码的简洁和可维护性。</p>
+
+                <p>现在就开始创建你自己的GitHub Pages网站吧！🚀</p>
+
+                <hr style="margin: 2rem 0; border: none; border-top: 1px solid var(--border-color);">
+                
+                <p style="text-align: center;">
+                    <a href="../index.html" style="color: var(--primary-color);">← 返回首页</a>
+                </p>
+            </div>
+        </article>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Felixx3001. All rights reserved.</p>
+            <p>
+                <a href="https://github.com/Felixx3001" target="_blank">GitHub</a> |
+                <a href="../about.html">关于我</a>
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
